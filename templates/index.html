@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    
+<div class="jumbotron text-center">
+    <h3>YY Blog'a Hoş Geldiniz</h3>
+    <font color="purple"><p>Bu blog django deneme blogudur.</p></font>
+
+</div>
+
+<p>
+        
+        {% if request.user.is_authenticated  %}
+                Hoş Geldiniz , {{request.user.username}}
+
+        {% else  %}
+               Lütfen giriş yapınız..
+        {% endif %}
+            
+
+</p>
+{% endblock body %}
+
+    
+    
